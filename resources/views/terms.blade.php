@@ -151,7 +151,7 @@
             </article>
             <article class="my-1">
                 <h4 class="mb-2 font-mediumn text-xl text-black">Platform issues and Support</h4>
-                <p class="py-1">  Where you have any questions, issues, or if you are having trouble accessing or using the Platform, please contact us on support@Foris Labs.com
+                <p class="py-1">  Where you have any questions, issues, or if you are having trouble accessing or using the Platform, please contact us on support@forislabs.com
 © Foris Labs 2021 All Rights Reserved 
             </article>
         </div>
