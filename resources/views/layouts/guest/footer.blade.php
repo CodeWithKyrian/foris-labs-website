@@ -1,12 +1,11 @@
 <footer class="bg-ash-800 text-ash-300">
-    <div class="flex flex-col md:flex-row justify-between px-5 py-6">
-        <div>
+    <div class="flex flex-col md:flex-row justify-between items-center px-5 py-4">
+        <div class="my-2">
             All Right Reserved © 2021 | Foris Labs
         </div>
-        <ul class="flex flex-wrap justify-center">
-            <li class="px-2"><a href="{{route('home')}}">Home</a></li>
+        <ul class="flex flex-wrap justify-center uppercase text-xs md:text-sm my-2">
             <li class="px-2"><a href="{{route('contact-us')}}">Contact</a></li>
-            <li class="px-2"><a href="{{route('privacy-policy')}}">Privacy</a></li>
+            <li class="px-2"><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
             <li class="px-2"><a href="{{route('terms')}}">Terms of Use</a></li>
         </ul>
     </div>
