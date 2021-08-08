@@ -34,19 +34,19 @@
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">FACEBOOK</h2>
-                        <a href="https:://facebook.com/ForisLabs" class="text-orange-500 leading-relaxed">Foris Labs</a>
+                        <a href="https://facebook.com/ForisLabs" target="_blank"  class="text-orange-500 leading-relaxed">Foris Labs</a>
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">INSTAGRAM</h2>
-                        <a href="https:://instagram.com/ForisLabs" class="text-orange-500 leading-relaxed">@forislabsafrica</a>
+                        <a href="https://instagram.com/ForisLabs" target="_blank"  class="text-orange-500 leading-relaxed">@forislabsafrica</a>
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">LINKEDIN</h2>
-                        <a href="https:://facebook.com/ForisLabs" class="text-orange-500 leading-relaxed">Foris Labs</a>
+                        <a href="https:://facebook.com/ForisLabs" target="_blank"  class="text-orange-500 leading-relaxed">Foris Labs</a>
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">TWITTER</h2>
-                        <a href="https:://instagram.com/ForisLabs" class="text-orange-500 leading-relaxed">@forislabsafrica</a>
+                        <a href="https://www.instagram.com/ForisLabs" target="_blank" class="text-orange-500 leading-relaxed">@forislabsafrica</a>
                     </div>
                 </div>
             </div>

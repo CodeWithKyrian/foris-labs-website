@@ -1,7 +1,4 @@
-<nav class="fixed inset-x-0 z-50" x-data="{ open: false, atTop: true }"
-    :class="{ 'bg-ash-800' : !atTop|open}"
-    @scroll.window="atTop = (window.pageYOffset > 100) ? false : true"
->
+<nav class="fixed inset-x-0 z-50" x-data="{ open: false, atTop: true }" :class="{ 'bg-ash-800' : !atTop|open}" @scroll.window="atTop = (window.pageYOffset > 100) ? false : true" @load.window="atTop = (window.pageYOffset > 100) ? false : true">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="flex-1 flex items-center justify-between">
@@ -10,13 +7,10 @@
                 </a>
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
-                        <a href="{{route('home')}}" class="@if(request()->routeIs('home')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-
-                        <a href="{{route('simulations')}}" class="@if(request()->routeIs('simulations')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif px-3 py-2 rounded-md text-sm font-medium">Simulations</a>
-                        
-                        <a href="{{route('pricing')}}" class="@if(request()->routeIs('pricing')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
-
-                        <a href="{{route('contact-us')}}" class="@if(request()->routeIs('contact-us')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <x-nav-link route="home">Home</x-nav-link>
+                        <x-nav-link route="simulations">Simulations</x-nav-link>
+                        <x-nav-link route="pricing">Pricing</x-nav-link>
+                        <x-nav-link route="contact-us">Contact Us</x-nav-link>
 
                         <a href="{{route('login')}}" class="bg-orange-500 text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
                     </div>
@@ -39,28 +33,19 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" x-show="open"
-    x-transition:enter="transition ease-out duration-500" x-transition:enter-start="transform opacity-0 scale-95"
-    x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-400"
-    x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95"
-    id="mobile-menu" @click.away="open = false">
+    <div class="sm:hidden" x-show="open" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" id="mobile-menu" @click.away="open = false">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="{{route('home')}}" class="@if(request()->routeIs('home')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
-
-            <a href="{{route('simulations')}}" class="@if(request()->routeIs('simulations')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif block px-3 py-2 rounded-md text-base font-medium">Simulations</a>
-            
-            <a href="{{route('pricing')}}" class="@if(request()->routeIs('pricing')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
-
-            <a href="{{route('contact-us')}}" class="@if(request()->routeIs('contact-us')) bg-ash-900 text-white @else text-ash-300 hover:bg-ash-700 hover:text-white @endif block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            
+            <x-nav-link route="home" class="block">Home</x-nav-link>
+            <x-nav-link route="simulations" class="block">Simulations</x-nav-link>
+            <x-nav-link route="pricing" class="block">Pricing</x-nav-link>
+            <x-nav-link route="contact-us" class="block">Contact Us</x-nav-link>
         </div>
         <div class="flex justify-center mb-4">
             <a href="{{route('login')}}" class="bg-orange-500 text-white inline px-8 py-2 rounded-md text-base font-medium">Login</a>
         </div>
     </div>
 
-    <div class="fixed bottom-4 md:bottom-16 right-4 z-20 transition-opacity duration-500"
-    :class="{ 'opacity-0' : atTop, 'opacity-100' : !atTop}">
+    <div class="fixed bottom-4 md:bottom-16 right-4 z-20 transition-opacity duration-500" :class="{ 'opacity-0' : atTop, 'opacity-100' : !atTop}">
         <button @click="$scroll(0)" :disabled="atTop" class="bg-ash-800 hover:bg-orange-500 text-lg w-14 h-14 flex items-center justify-center text-white rounded-full"><i class="fa fa-arrow-up"></i></button>
     </div>
 </nav>

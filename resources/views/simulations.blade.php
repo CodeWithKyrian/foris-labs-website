@@ -13,49 +13,29 @@
     </section>
     <section class="text-gray-600 body-font">
         <div class="px-4 md:px-6 py-24 mx-auto">
-            <div class="w-full text-center">
-                <x-title color="dark">Chemistry</x-title>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="p-3 md:w-1/3 sm:w-1/2">
-                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog">
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-orange-500 mb-1">ANALYTICAL CHEMISTRY</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Acid Concentration</h1>
-                            <p class="leading-relaxed mb-3">Determination of an acid's concentration by titration of acid against a base with known concentration</p>
+            @foreach($simulation_groups as $key => $simulations)
+                <div class="py-4">
+                    <div class="w-full text-center">
+                        <x-title color="dark">{{$key}}</x-title>
+                    </div>
+                    <div class="flex flex-wrap">
+                    @forelse($simulations as $simulation)
+                        <div class="p-3 md:w-1/3 sm:w-1/2">
+                            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ $simulation->banner_url }}" alt="blog">
+                                <div class="p-6">
+                                    <h2 class="tracking-widest text-xs title-font font-medium text-orange-500 mb-1 uppercase">{{$simulation->category->name}}</h2>
+                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-2">{{$simulation->title}}</h1>
+                                    <p class="leading-relaxed mb-2">{{$simulation->summary}}</p>
+                                </div>
+                            </div>
                         </div>
+                    @empty
+                        <p class="leading-relaxed">Coming Soon</p>
+                    @endforelse
                     </div>
                 </div>
-                <div class="p-3 md:w-1/3 sm:w-1/2">
-                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog">
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-orange-500 mb-1">ANALYTICAL CHEMISTRY</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Water Crystallization</h1>
-                            <p class="leading-relaxed mb-3">etermination of number of particles of water crustallization in a viable salt of known quantity.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 md:w-1/3 sm:w-1/2">
-                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog">
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-orange-500 mb-1">ANALYTICAL CHEMISTRY</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Water Hardness</h1>
-                            <p class="leading-relaxed mb-3">Determination of Water Hardness by Complexometric Titration using a process beknown to all eternity..</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full text-center py-8">
-                <x-title color="dark">Physics</x-title>
-                <p class="leading-relaxed mb-6">Coming Soon</p>
-            </div>
-            <div class="w-full text-center py-8">
-                <x-title color="dark">Biology</x-title>
-                <p class="leading-relaxed mb-6">Coming Soon</p>
-            </div>
+            @endforeach
         </div>
     </section>
 </x-guest-layout>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,17 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-Route::get('/privacy-policy', function () { return view('privacy'); })->name('privacy-policy');
-Route::get('/terms-of-use', function () { return view('terms'); })->name('terms');
-Route::get('/contact-us', function () { return view('contact'); })->name('contact-us');
-Route::get('/simulations', function () { return view('simulations'); })->name('simulations');
-Route::get('/pricing', function () { return view('pricing'); })->name('pricing');
+Route::get('/', [HomeController::class, 'Index'])->name('home');
+Route::get('/privacy-policy', [HomeController::class, 'Privacy'])->name('privacy-policy');
+Route::get('/terms-of-use', [HomeController::class, 'Terms'])->name('terms');
+Route::get('/contact-us', [HomeController::class, 'Contact'])->name('contact-us');
+Route::get('/simulations', [HomeController::class, 'Simulations'])->name('simulations');
+Route::get('/pricing', [HomeController::class, 'Pricing'])->name('pricing');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
+    Route::get('/simulations', [AdminController::class, 'Simulations'])->name('simulations');
+});
 
 require __DIR__.'/auth.php';

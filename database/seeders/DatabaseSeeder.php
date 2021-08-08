@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Simulation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -24,5 +25,7 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
         ]);
         \App\Models\User::factory(10)->create();
+        $this->call(CategorySeeder::class);
+        $this->call(SimulationSeeder::class);
     }
 }

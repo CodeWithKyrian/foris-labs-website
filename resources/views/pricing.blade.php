@@ -17,7 +17,7 @@
                 <div class="flex flex-wrap items-center -mx-5">
                     <div class="w-full lg:w-1/2 px-5 mb-20 lg:mb-0">
                         <div class="max-w-md">
-                            <h2 class="mt-12 mb-10 text-4xl font-bold font-heading">Build and launch without problems</h2>
+                            <h2 class="mt-12 mb-10 text-4xl font-bold font-heading">Start your experiments without problems</h2>
                             <p class="mb-16 text-xl text-gray-500">Get our free mobile application.</p>
                             <a class="inline-block px-8 py-4 text-white font-bold bg-orange-500 hover:bg-orange-600 rounded-full transition duration-200" href="{{route('simulations')}}">View Simulations</a>
                         </div>

@@ -11,6 +11,8 @@ $classes = ($color == 'light')
              before:absolute before:h-[1px] before:bg-ash-800 before:w-3/5 before:-top-2 before:left-[-15%]
              after:absolute after:h-[1px] after:bg-ash-800 after:w-3/5 after:-bottom-2 after:right-[-15%]";
 @endphp
-<h1 {{ $attributes->merge(['class' => $classes]) }}>
-    {{ $slot }}
-</h1>
+<div class="text-center">
+    <h1 {{ $attributes->merge(['class' => $classes]) }}>
+        {{ $slot }}
+    </h1>
+</div>

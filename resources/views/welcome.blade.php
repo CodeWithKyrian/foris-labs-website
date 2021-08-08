@@ -19,49 +19,70 @@
             </div>
         </div>
     </section>
-    <section class="text-ash-600 body-font text-center">
-        <div class="container px-5 py-24 mx-auto">
-            <x-title color="dark">Why Foris Labs</x-title>
+    <section class="text-gray-600">
+        <div class="container px-5 lg:px-12 py-16 mx-auto">
+            <x-title color="dark">Who we are</x-title>
+            <div class="flex md:flex-row flex-col items-center">
+                <div class="lg:max-w-sm lg:w-full md:w-2/5 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center" alt="hero" src="{{asset('/img/labb.jpg')}}">
+                </div>
+                <div class="lg:flex-grow md:w-3/5 lg:pl-16 md:pl-10 flex flex-col md:items-start md:text-left items-center text-center">
+                    <p class="mb-2 leading-7">
+                        Foris Labs is an app-based platform designed to introduce a safe and interactive laboratory environment for students
+                        by creating a virtual learning space that allows students to conduct science experiments individually and in groups interactively via their mobile phones.
+                    </p>
+                    <p class="mb-2 leading-7">It is developed with well-tailored laboratory experiments for various classes according to the West African educational curriculum. Our unique aim is
+                        to make practical sessions accessible for students in a fun and engaging way </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-ash-100 bg-ash-800">
+        <div class="container px-5 xl:px-16 py-16 mx-auto">
             <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                <div class="p-4 md:w-1/3 flex flex-col items-center border-b md:border-r md:border-b-0">
-                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-ash-700 text-ash-700 mb-4 flex-shrink-0">
-                        <svg fill="none" class="w-10 h-10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                <div class="p-4 md:w-1/3 flex md:flex-col items-center border-b md:border-r md:border-b-0">
+                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-ash-200 text-ash-200 mb-4 flex-shrink-0">
+                        <svg viewBox="0 0 512 512" class="w-10 h-10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m510.98 250.98c-43.569-102.44-143.66-168.63-254.98-168.63s-211.41 66.191-254.98 168.63c-1.364 3.206-1.364 6.827 0 10.033 43.568 102.45 143.65 168.65 254.98 168.65 111.33 0 211.41-66.198 254.98-168.65 1.364-3.206 1.364-6.827 0-10.033zm-254.98 153.05c-99.194 0-188.56-57.922-229.19-148.03 40.635-90.098 130-148.01 229.19-148.01 99.193 0 188.56 57.916 229.19 148.01-40.634 90.107-130 148.03-229.19 148.03z" />
+                            <path d="m256 157.82c-54.134 0-98.174 44.041-98.174 98.174s44.041 98.174 98.174 98.174 98.174-44.04 98.174-98.174-44.041-98.174-98.174-98.174zm0 170.72c-39.998 0-72.54-32.542-72.54-72.54s32.542-72.54 72.54-72.54 72.54 32.542 72.54 72.54-32.542 72.54-72.54 72.54z" />
+                            <path d="m256 203.88c-28.739 0-52.123 23.382-52.123 52.123 0 7.078 5.737 12.817 12.817 12.817s12.817-5.739 12.817-12.817c0-14.606 11.882-26.489 26.489-26.489 7.08 0 12.817-5.739 12.817-12.817 0-7.08-5.739-12.817-12.817-12.817z" />
                         </svg>
                     </div>
-                    <div class="flex-grow pl-6">
-                        <h2 class="text-gray-900 text-xl title-font font-medium mb-2">Shooting Stars</h2>
-                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS.</p>
+                    <div class="flex-grow pl-6 md:pl-0 md:text-center">
+                        <h2 class="text-gray-100 text-lg md:text-xl title-font font-medium mb-2">Our Vision</h2>
+                        <p class="leading-relaxed text-sm md:text-base">To be Africa's most user-centric virtual science laboratory brand promoting science learning and sparking ground-breaking science discoveries from Africa.</p>
                     </div>
                 </div>
-                <div class="p-4 md:w-1/3 flex flex-col items-center border-b md:border-r md:border-b-0">
-                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-ash-700 text-ash-700 mb-4 flex-shrink-0">
-                        <svg fill="none" class="w-10 h-10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                <div class="p-4 md:w-1/3 flex flex-row-reverse md:flex-col items-center border-b md:border-r md:border-b-0">
+                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-ash-200 text-ash-200 mb-4 flex-shrink-0">
+                        <svg viewBox="0 0 390 390" class="w-10 h-10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m380.81 195 8.419-25.258c2.619-7.859-1.628-16.354-9.487-18.974-7.858-2.619-16.354 1.628-18.974 9.487l-6.581 19.744h-24.878c-7.603-83.978-78.386-150-164.31-150-90.981 0-165 74.019-165 165s74.019 165 165 165c85.925 0 156.71-66.022 164.31-150h24.878l6.581 19.744c2.096 6.286 7.947 10.26 14.228 10.26 1.572 0 3.172-0.249 4.746-0.773 7.858-2.62 12.105-11.115 9.486-18.974l-8.418-25.256zm-215.81 135c-74.439 0-135-60.56-135-135s60.561-135 135-135c69.369 0 126.68 52.595 134.16 120h-30.238c-7.301-50.816-51.119-90-103.92-90-57.896 0-105 47.103-105 105s47.104 105 105 105c52.805 0 96.623-39.184 103.92-90h30.238c-7.486 67.405-64.793 120-134.16 120zm42.42-150c-6.192-17.458-22.865-30-42.42-30-24.813 0-45 20.187-45 45s20.188 45 45 45c19.555 0 36.228-12.542 42.42-30h31.07c-6.968 34.192-37.271 60-73.49 60-41.355 0-75-33.645-75-75s33.645-75 75-75c36.219 0 66.522 25.808 73.49 60h-31.07z" />
                         </svg>
                     </div>
-                    <div class="flex-grow pl-6">
-                        <h2 class="text-gray-900 text-xl title-font font-medium mb-2">Clean Design</h2>
-                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS.</p>
+                    <div class="flex-grow pr-6 md:pr-0 text-right md:text-center">
+                        <h2 class="text-gray-100 text-lg md:text-xl title-font font-medium mb-2">Our Mission</h2>
+                        <p class="leading-relaxed text-sm md:text-base">Promoting science engagement and intergenerational learning by providing the most up-to-date, curriculum based, and personalized laboratory platform for people of all ages.</p>
                     </div>
                 </div>
-                <div class="p-4 md:w-1/3 flex flex-col items-center ">
-                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-ash-700 text-ash-700 mb-4 flex-shrink-0">
+                <div class="p-4 md:w-1/3 flex md:flex-col items-center">
+                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-ash-200 text-ash-200 mb-4 flex-shrink-0">
                         <svg fill="none" class="w-10 h-10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                         </svg>
                     </div>
-                    <div class="flex-grow pl-6">
-                        <h2 class="text-gray-900 text-xl title-font font-medium mb-2">Fast Performance</h2>
-                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS.</p>
+                    <div class="flex-grow pl-6 md:pl-0 md:text-center">
+                        <h2 class="text-gray-100 text-lg md:text-xl title-font font-medium mb-2">Our Results</h2>
+                        <p class="leading-relaxed text-sm md:text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <div class="w-full bg-center text-ash-600 bg-cover bg-fixed h-screen flex items-center " style="background-image: url('/img/bg-part.png');">
-            <div class="container max-w-5xl mx-auto flex px-4 md:px-12 py-24 md:flex-row flex-col items-center">
+    <section class="relative">
+        <div class="absolute z-[-1] w-full bg-center text-ash-600 bg-cover bg-fixed h-full flex items-center" style="background-image: url('/img/bg-part.png');">
+        </div>
+        <div class="container px-5 xl:px-16 py-16 mx-auto">
+            <div class="flex md:flex-row flex-col items-center">
                 <div class="w-full md:w-1/2">
                     <img class="object-cover object-center rounded" alt="hero" src="{{asset('img/macbook.png')}}">
                 </div>
@@ -72,14 +93,13 @@
                         <strong class="text-black">colleges</strong>
                     </h1>
                     <ul class="text-left list-inside list-disc mb-4">
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Minim veniam quis nostrud exercitation.</li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Commodo consequat. </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Duis aute irure dolor in reprehenderit in voluptate. </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Velitesse cillum dolore eu fugiat nulla pariatur. </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Excepteur sint occaecat cupidatat non proident sunt. </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Culpa qui officia deserunt mollit anim id est laborum. </li>
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Offline Available Laboratory</li>
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Affordable and  Effective Laboratory </li>
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Designed just like in games </li>
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Aligned with the National School curriculum. </li>
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Intuitive and Free Laboratory </li>
                     </ul>
-                    <div class="flex justify-center w-full">
+                    <div class="flex justify-center md:justify-start w-full py-2">
                         <a href="{{route('pricing')}}#plans" class="inline-flex items-center text-white bg-orange-500 transition-colors duration-500 border-0 py-3 px-8 focus:outline-none hover:bg-ash-800 hover:text-ash-100 rounded-full text-md">
                             <span>Pre-order Now</span>
                         </a>
