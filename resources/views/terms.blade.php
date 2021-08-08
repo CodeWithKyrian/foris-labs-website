@@ -65,7 +65,7 @@
             </article>
             <article class="my-1">
                 <h4 class="mb-2 font-mediumn text-xl text-black">Pricing and Price Increases</h4>
-                <p class="py-1"> The pricing for any services or Paid Subscriptions is listed on PraxiLabs’ Platform. Foris Labs may increase
+                <p class="py-1"> The pricing for any services or Paid Subscriptions is listed on Foris Labs’ Platform. Foris Labs may increase
                     the price of any Paid Subscriptions or services, at our discretion and we reserve the right to do so at any time.
                     In the event of a price increase, Foris Labs shall notify you and you will have the chance to accept or reject any price increase.
                     Please notify us if you intend to reject a price increase. Where you have rejected a price increase, you may be unable to access
@@ -83,7 +83,7 @@
                     written permission from the Company and its respective owners. The technology and software underlying the Service or
                     distributed in connection therewith is the property of Foris Labs, our affiliates and our partners (the “Software”).
                     You agree not to copy, modify, create a derivative work of, reverse engineer, reverse assemble or otherwise attempt
-                    to discover any source code, sell, assign, sublicense, or otherwise transfer any right in the Software. Foris Labs and PraxiLabs’
+                    to discover any source code, sell, assign, sublicense, or otherwise transfer any right in the Software. Foris Labs and Foris Labs’
                     logos are trademarks of Foris Labs and may not be used without the express written permission of Foris Labs.
             </article>
             <article class="my-1">
@@ -105,13 +105,13 @@
             </article>
             <article class="my-1">
                 <h4 class="mb-2 font-mediumn text-xl text-black">Disclaimer</h4>
-                <p class="py-1"> The information on PraxiLabs’ website is provided on an “as-is” basis. The Services, Content, Website and any Software of Foris Labs and provided
+                <p class="py-1"> The information on Foris Labs’ website is provided on an “as-is” basis. The Services, Content, Website and any Software of Foris Labs and provided
                     by any affiliates or any third party are provided without warranties of any kind, either express or implied, including, without limitation, direct loss,
                     merchantability, fitness for a particular purpose, non-infringement or that use of The Services will be uninterrupted or error-free.
             </article>
             <article class="my-1">
                 <h4 class="mb-2 font-mediumn text-xl text-black">Disclaimer</h4>
-                <p class="py-1"> The information on PraxiLabs’ website is provided on an “as-is” basis. The Services, Content, Website and any Software of Foris Labs and provided
+                <p class="py-1"> The information on Foris Labs’ website is provided on an “as-is” basis. The Services, Content, Website and any Software of Foris Labs and provided
                     by any affiliates or any third party are provided without warranties of any kind, either express or implied, including, without limitation, direct loss,
                     merchantability, fitness for a particular purpose, non-infringement or that use of The Services will be uninterrupted or error-free.
             </article>
@@ -119,7 +119,7 @@
                 <h4 class="mb-2 font-mediumn text-xl text-black">Limitation of Liability</h4>
                 <p class="py-1"> Under no circumstances will Foris Labs, its officers, directors, employees, or agents, be liable to you for any direct, indirect,
                     incidental, special, exemplary, or consequential damages, personal injury/wrongful death, lost or anticipated profits, lost data, or business interruption,
-                    the use or misuse of The Content in any way whatsoever arising out of the use of, or inability to use, The Service, whether or not PraxiLabs’ parties are advised
+                    the use or misuse of The Content in any way whatsoever arising out of the use of, or inability to use, The Service, whether or not Foris Labs’ parties are advised
                     of the possibility of such damages.
             </article>
             <article class="my-1">
