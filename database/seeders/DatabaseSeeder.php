@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Simulation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -19,13 +18,15 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'name' => 'Kyrian Obikwelu',
-            'email' => 'koshnawaza@gmail.com',
+            'email' => 'admin@admin.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'), // password
             'remember_token' => Str::random(10),
         ]);
-        \App\Models\User::factory(10)->create();
+        User::factory(10)->create();
         $this->call(CategorySeeder::class);
         $this->call(SimulationSeeder::class);
+        $this->call(PostSeeder::class);
+        $this->call(CommentSeeder::class);
     }
 }

@@ -1,4 +1,4 @@
-<nav class="fixed inset-x-0 z-50" x-data="{ open: false, atTop: true }" :class="{ 'bg-ash-800' : !atTop|open}" @scroll.window="atTop = (window.pageYOffset > 100) ? false : true" @load.window="atTop = (window.pageYOffset > 100) ? false : true">
+<nav class="fixed inset-x-0 z-50 bg-ash-800" x-data="{ open: false, atTop: true }" @scroll.window="atTop = (window.pageYOffset > 100) ? false : true" @load.window="atTop = (window.pageYOffset > 100) ? false : true">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="flex-1 flex items-center justify-between">

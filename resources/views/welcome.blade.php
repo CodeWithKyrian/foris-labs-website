@@ -3,7 +3,7 @@
         <div class="w-full bg-center text-white bg-cover h-screen flex items-center " style="background-image: url('/img/header-bg.png');">
             <div class="container max-w-7xl mx-auto flex px-4 md:px-16 py-12 md:flex-row flex-col items-center">
                 <div class="md:w-3/5 lg:pr-12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Africa's first offline, virtual 3d laboratory
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Africa's first offline virtual 3d laboratory
                     </h1>
                     <p class="mb-8 leading-relaxed">Promoting science engagement and intergenerational learning by providing the most up-to-date, curriculum based, and personalized laboratory platform for people of all ages.</p>
                     <div class="flex justify-center">
