@@ -41,14 +41,15 @@ class HomeController extends Controller
 
     public function ListPosts()
     {
-        $posts = Post::with('comments')->paginate(10);
-        $featured = Post::featured()->with('comments')->latest()->limit(2)->get();
+        $posts = Post::paginate(10);
+        $featured = Post::featured()->latest()->limit(2)->get();
         return view('blog', compact('posts', 'featured'));
     }
 
     public function GetPost($slug)
     {
         $post = Post::with('comments')->where('slug', $slug)->first();
-        return view('single-post', compact('post'));
+        $recent_posts = Post::latest()->limit(5)->get();
+        return view('single-post', compact('post', 'recent_posts'));
     }
 }

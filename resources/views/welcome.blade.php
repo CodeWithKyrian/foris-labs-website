@@ -19,7 +19,7 @@
             </div>
         </div>
     </section>
-    <section class="text-gray-600">
+    <section class="text-ash-600">
         <div class="container px-5 lg:px-12 py-16 mx-auto">
             <x-title color="dark">Who we are</x-title>
             <div class="flex md:flex-row flex-col items-center">
@@ -49,7 +49,7 @@
                         </svg>
                     </div>
                     <div class="flex-grow pl-6 md:pl-0 md:text-center">
-                        <h2 class="text-gray-100 text-lg md:text-xl title-font font-medium mb-2">Our Vision</h2>
+                        <h2 class="text-ash-100 text-lg md:text-xl title-font font-medium mb-2">Our Vision</h2>
                         <p class="leading-relaxed text-sm md:text-base">To be Africa's most user-centric virtual science laboratory brand promoting science learning and sparking ground-breaking science discoveries from Africa.</p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         </svg>
                     </div>
                     <div class="flex-grow pr-6 md:pr-0 text-right md:text-center">
-                        <h2 class="text-gray-100 text-lg md:text-xl title-font font-medium mb-2">Our Mission</h2>
+                        <h2 class="text-ash-100 text-lg md:text-xl title-font font-medium mb-2">Our Mission</h2>
                         <p class="leading-relaxed text-sm md:text-base">Promoting science engagement and intergenerational learning by providing the most up-to-date, curriculum based, and personalized laboratory platform for people of all ages.</p>
                     </div>
                 </div>
@@ -71,8 +71,8 @@
                         </svg>
                     </div>
                     <div class="flex-grow pl-6 md:pl-0 md:text-center">
-                        <h2 class="text-gray-100 text-lg md:text-xl title-font font-medium mb-2">Our Results</h2>
-                        <p class="leading-relaxed text-sm md:text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS.</p>
+                        <h2 class="text-ash-100 text-lg md:text-xl title-font font-medium mb-2">Our Results</h2>
+                        <p class="leading-relaxed text-sm md:text-base">Orange bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS.</p>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                     </h1>
                     <ul class="text-left list-inside list-disc mb-4">
                         <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Offline Available Laboratory</li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Affordable and  Effective Laboratory </li>
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Affordable and Effective Laboratory </li>
                         <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Designed just like in games </li>
                         <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Aligned with the National School curriculum. </li>
                         <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Intuitive and Free Laboratory </li>
@@ -109,25 +109,25 @@
         </div>
     </section>
     <section>
-        <div class="container px-5 py-16 mx-auto text-center">
+        <div class="container px-5 py-12 mx-auto text-center">
             <x-title color="dark">Our Partners</x-title>
             <div class="flex">
                 <div class="swiper-container min-h-[6rem]" id="container-1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="object-cover object-center transition duration-500 filter grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/google.png')}}">
+                            <img class="object-cover object-center transition duration-500 grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/google.png')}}">
                         </div>
                         <div class="swiper-slide">
-                            <img class="object-cover object-center transition duration-500 filter grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/injini.png')}}">
+                            <img class="object-cover object-center transition duration-500 grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/injini.png')}}">
                         </div>
                         <div class="swiper-slide">
-                            <img class="object-cover object-center transition duration-500 filter grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/samsung.png')}}">
+                            <img class="object-cover object-center transition duration-500 grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/samsung.png')}}">
                         </div>
                         <div class="swiper-slide">
-                            <img class="object-cover object-center transition duration-500 filter grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/stanford.png')}}">
+                            <img class="object-cover object-center transition duration-500 grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/stanford.png')}}">
                         </div>
                         <div class="swiper-slide">
-                            <img class="object-cover object-center transition duration-500 filter grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/stemnovo.png')}}">
+                            <img class="object-cover object-center transition duration-500 grayscale hover:filter-none hover:scale-110" alt="image" src="{{asset('img/brands/stemnovo.png')}}">
                         </div>
                     </div>
                     <div class="swiper-pagination" id="pagination-1"></div>
@@ -135,12 +135,12 @@
             </div>
         </div>
     </section>
-    <section class="text-gray-600 bg-ash-800 body-font">
+    <section class="text-ash-600 body-font">
         <div class="container px-5 py-12 mx-auto text-center">
-            <x-title color="light">Metrics</x-title>
+            <x-title color="dark">Metrics</x-title>
             <div class="flex flex-wrap -m-4 text-center">
                 <div class="p-4 md:w-1/4 sm:w-1/2 w-full cursor-pointer">
-                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 text-ash-100 border-gray-200 bg-transparent px-4 py-6 rounded-lg">
+                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 hover:text-white text-ash-700 border-ash-500 bg-transparent px-4 py-6 rounded-lg">
                         <svg class="w-12 h-12 mb-3 inline-block" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M8 17l4 4 4-4m-4-5v9"></path>
                             <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 <div class="p-4 md:w-1/4 sm:w-1/2 w-full cursor-pointer">
-                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 text-ash-100 border-gray-200 bg-transparent px-4 py-6 rounded-lg">
+                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 hover:text-white text-ash-700 border-ash-500 bg-transparent px-4 py-6 rounded-lg">
                         <svg class="w-12 h-12 mb-3 inline-block" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div class="p-4 md:w-1/4 sm:w-1/2 w-full cursor-pointer">
-                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 text-ash-100 border-gray-200 bg-transparent px-4 py-6 rounded-lg">
+                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 hover:text-white text-ash-700 border-ash-500 bg-transparent px-4 py-6 rounded-lg">
                         <svg class="w-12 h-12 mb-3 inline-block" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M3 18v-6a9 9 0 0118 0v6"></path>
                             <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="p-4 md:w-1/4 sm:w-1/2 w-full cursor-pointer">
-                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 text-ash-100 border-gray-200 bg-transparent px-4 py-6 rounded-lg">
+                    <div class="border-2 hover:bg-orange-500 hover:border-orange-500 hover:text-white text-ash-700 border-ash-500 bg-transparent px-4 py-6 rounded-lg">
                         <svg class="w-12 h-12 mb-3 inline-block" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
@@ -179,6 +179,29 @@
                         <p class="leading-relaxed">Laboratories</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-ash-800 border-b border-b-ash-700">
+        <div class="container px-5 py-16 mx-auto">
+            <x-title color="light">Milestones</x-title>
+            <div class="flex flex-col mx-auto p-2 text-orange-50">
+                <x-timeline-item  title="Lorem ipsum" active>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Vitae, facilis.
+                </x-timeline-item>
+                <x-timeline-item title="Lorem ipsum">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Vitae, facilis.
+                </x-timeline-item>
+                <x-timeline-item title="Lorem ipsum">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Vitae, facilis.
+                </x-timeline-item>
+                <x-timeline-item title="Lorem ipsum" last>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Vitae, facilis.
+                </x-timeline-item>
             </div>
         </div>
     </section>
@@ -289,7 +312,7 @@
             </div>
         </div>
     </section>
-    <section class="text-gray-600 bg-ash-100 body-font">
+    <section class="text-ash-600 bg-ash-100 body-font">
         <div class="container px-5 py-24 mx-auto text-center">
             <x-title color="dark">Meet Our Team</x-title>
             <div class="flex flex-wrap justify-around">
@@ -315,7 +338,7 @@
                             </div>
                         </div>
                         <div class="p-8">
-                            <h5 class="mb-1 text-xl font-bold text-gray-900">Onuigbo John</h5>
+                            <h5 class="mb-1 text-xl font-bold text-ash-900">Onuigbo John</h5>
                             <p>CEO / Co-Founder</p>
                         </div>
                     </div>
@@ -342,7 +365,7 @@
                             </div>
                         </div>
                         <div class="p-8">
-                            <h5 class="mb-1 text-xl font-bold text-gray-900">Obikwelu Kyrian</h5>
+                            <h5 class="mb-1 text-xl font-bold text-ash-900">Obikwelu Kyrian</h5>
                             <p>CTO / Co-Founder</p>
                         </div>
                     </div>
@@ -369,7 +392,7 @@
                             </div>
                         </div>
                         <div class="p-8">
-                            <h5 class="mb-1 text-xl font-bold text-gray-900">Okeke Makuochukwu</h5>
+                            <h5 class="mb-1 text-xl font-bold text-ash-900">Okeke Makuochukwu</h5>
                             <p>Marketing Director</p>
                         </div>
                     </div>
