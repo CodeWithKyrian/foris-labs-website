@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Simulations">
     <x-top-card title="Simulation Catalog 👻" subtitle="List of all simulations we have so far.">
     </x-top-card>
     <div class="grid grid-cols-12 gap-6">

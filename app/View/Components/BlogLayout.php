@@ -6,6 +6,11 @@ use Illuminate\View\Component;
 
 class BlogLayout extends Component
 {
+    public $title;
+
+    public function __construct($title) {
+        $this->title = $title;
+    }
     /**
      * Get the view / contents that represents the component.
      *

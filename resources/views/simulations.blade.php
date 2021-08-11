@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Simulations">
     <section>
         <div class="w-full bg-center text-white bg-cover min-h-[350px] pt-24 pb-8 " style="background-image: url('/img/header-bg.png');">
             <div class="container max-w-7xl mx-auto flex px-4 md:px-16 py-12 flex-col items-center">

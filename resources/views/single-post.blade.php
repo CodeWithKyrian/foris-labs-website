@@ -1,4 +1,4 @@
-<x-blog-layout>
+<x-blog-layout :title="$post->title">
     <section>
         <div class="container px-5 lg:px-12 py-16 mx-auto">
             <div class="flex flex-wrap overflow-hidden">
@@ -10,7 +10,7 @@
                                 <h2 class="text-gray-900 text-3xl my-5 font-bold">{{$post->title}}</h2>
                                 <span class="text-xs text-gray-800 font-thin block mb-5">{{ $post->created_at->format('l, jS F, Y') }}</span>
                                 <div class="text-gray-900 font-thin">
-                                    {{$post->body}}
+                                    {!! $post->body !!}
                                 </div>
                             </div>
                         </div>

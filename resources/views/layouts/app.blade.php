@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{$title}} | {{ config('app.name', 'Laravel') }}</title>
 
-     <!-- Fonts -->
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body class="font-sans antialiased">
@@ -32,17 +32,21 @@
                         </svg>
                     </button>
                     <a aria-current="page" class="block active" href="/" style="outline: currentcolor none medium;">
-                        <x-application-logo theme="light"  class="w-24"></x-application-logo>
+                        <x-application-logo theme="light" class="w-24"></x-application-logo>
                     </a>
                 </div>
                 <nav>
                     <h3 class="text-xs uppercase text-ash-500 font-semibold pl-3">Pages</h3>
                     <ul class="mt-3">
-                        <x-nav-icons.menu-circles route="admin.dashboard" title="Dashboard"/>
-                        <x-nav-icons.meter route="admin.simulations" title="Simulations"/>
-                        <x-nav-icons.box route="home" title="Orders"/>
-                        <x-nav-icons.people route="home" title="Team"/>
-                        <x-nav-icons.diag-circles route="home" title="Settings"/>
+                        <x-nav-icons.menu-circles route="admin.dashboard" title="Dashboard" />
+                        <x-nav-icons.meter route="admin.simulations" title="Simulations" />
+                        <x-nav-icons.box route="admin.posts.index" title="Blog" />
+                        <x-nav-icons.people route="admin.team" title="Team" />
+                    </ul>
+                    <h3 class="text-xs uppercase text-ash-500 font-semibold pl-3 mt-4">Settings</h3>
+                    <ul class="mt-3">
+                        <x-nav-icons.task-list route="admin.settings.page" title="Page Settings" />
+                        <x-nav-icons.gears route="admin.settings.general" title="General Settings" />
                     </ul>
                 </nav>
             </div>
@@ -55,9 +59,9 @@
                             <button @click="open = !open" class="text-ash-500 hover:text-ash-600 lg:hidden" aria-controls="sidebar" aria-expanded="false" style="outline: currentcolor none medium;">
                                 <span class="sr-only">Open sidebar</span>
                                 <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="4" y="5" width="16" height="2"></rect>
-                                        <rect x="4" y="11" width="16" height="2"></rect>
-                                        <rect x="4" y="17" width="16" height="2"></rect>
+                                    <rect x="4" y="5" width="16" height="2"></rect>
+                                    <rect x="4" y="11" width="16" height="2"></rect>
+                                    <rect x="4" y="17" width="16" height="2"></rect>
                                 </svg>
                             </button>
                         </div>
@@ -66,8 +70,8 @@
                                 <button class="w-8 h-8 flex items-center justify-center bg-ash-100 hover:bg-ash-200 transition duration-150 rounded-full ml-3 false" aria-controls="search-modal" style="outline: currentcolor none medium;">
                                     <span class="sr-only">Search</span>
                                     <svg class="w-4 h-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="fill-current text-ash-500" d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"></path>
-                                            <path class="fill-current text-ash-400" d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"></path>
+                                        <path class="fill-current text-ash-500" d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"></path>
+                                        <path class="fill-current text-ash-400" d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"></path>
                                     </svg>
                                 </button>
                                 <div class="fixed inset-0 bg-ash-900 bg-opacity-30 z-50 transition-opacity" aria-hidden="true" style="display: none;"></div>
@@ -144,13 +148,10 @@
             <main class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
                 {{$slot}}
             </main>
-            <!-- <div class="fixed bottom-0 right-0 w-full md:bottom-8 md:right-12 md:w-auto z-60">
-                <div class="bg-ash-800 text-ash-50 text-sm p-3 md:rounded shadow-lg flex justify-between">
-                    <div>👉 <a class="hover:underline" href="https://github.com/cruip/tailwind-dashboard-template" target="_blank" rel="noreferrer" style="outline: currentcolor none medium;">Download Mosaic Lite on GitHub</a></div><button class="text-ash-500 hover:text-ash-400 ml-5" style="outline: currentcolor none medium;"><span class="sr-only">Close</span><svg class="w-4 h-4 flex-shrink-0 fill-current" viewBox="0 0 16 16">
-                            <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z"></path>
-                        </svg></button>
-                </div>
-            </div> -->
+
+            @if (session('status'))
+            <x-alert :message="session('message')"></x-alert>
+            @endif
         </div>
     </div>
 </body>

@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="3d Virtual Laboratory">
     <section>
         <div class="w-full bg-center text-white bg-cover h-screen flex items-center " style="background-image: url('/img/header-bg.png');">
             <div class="container max-w-7xl mx-auto flex px-4 md:px-16 py-12 md:flex-row flex-col items-center">
@@ -26,13 +26,8 @@
                 <div class="lg:max-w-sm lg:w-full md:w-2/5 w-5/6 mb-10 md:mb-0">
                     <img class="object-cover object-center" alt="hero" src="{{asset('/img/labb.jpg')}}">
                 </div>
-                <div class="lg:flex-grow md:w-3/5 lg:pl-16 md:pl-10 flex flex-col md:items-start md:text-left items-center text-center">
-                    <p class="mb-2 leading-7">
-                        Foris Labs is an app-based platform designed to introduce a safe and interactive laboratory environment for students
-                        by creating a virtual learning space that allows students to conduct science experiments individually and in groups interactively via their mobile phones.
-                    </p>
-                    <p class="mb-2 leading-7">It is developed with well-tailored laboratory experiments for various classes according to the West African educational curriculum. Our unique aim is
-                        to make practical sessions accessible for students in a fun and engaging way </p>
+                <div class="lg:flex-grow md:w-3/5 lg:pl-16 md:pl-10 flex flex-col md:items-start md:text-left items-center text-center leading-7 space-y-2">
+                    {!! settings('intro_paragraph') !!}
                 </div>
             </div>
         </div>
@@ -50,7 +45,7 @@
                     </div>
                     <div class="flex-grow pl-6 md:pl-0 md:text-center">
                         <h2 class="text-ash-100 text-lg md:text-xl title-font font-medium mb-2">Our Vision</h2>
-                        <p class="leading-relaxed text-sm md:text-base">To be Africa's most user-centric virtual science laboratory brand promoting science learning and sparking ground-breaking science discoveries from Africa.</p>
+                        <p class="leading-relaxed text-sm md:text-base">{{ settings('vision') }}</p>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3 flex flex-row-reverse md:flex-col items-center border-b md:border-r md:border-b-0">
@@ -61,7 +56,7 @@
                     </div>
                     <div class="flex-grow pr-6 md:pr-0 text-right md:text-center">
                         <h2 class="text-ash-100 text-lg md:text-xl title-font font-medium mb-2">Our Mission</h2>
-                        <p class="leading-relaxed text-sm md:text-base">Promoting science engagement and intergenerational learning by providing the most up-to-date, curriculum based, and personalized laboratory platform for people of all ages.</p>
+                        <p class="leading-relaxed text-sm md:text-base">{{ settings('mission') }}</p>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3 flex md:flex-col items-center">
@@ -93,11 +88,9 @@
                         <strong class="text-black">colleges</strong>
                     </h1>
                     <ul class="text-left list-inside list-disc mb-4">
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Offline Available Laboratory</li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Affordable and Effective Laboratory </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Designed just like in games </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Aligned with the National School curriculum. </li>
-                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>Intuitive and Free Laboratory </li>
+                        @foreach(json_decode(settings('features')) as $feature)
+                        <li class="py-2 flex"><i class="fa fa-long-arrow-alt-right text-sm pr-6"></i>{{$feature}}</li>
+                        @endforeach
                     </ul>
                     <div class="flex justify-center md:justify-start w-full py-2">
                         <a href="{{route('pricing')}}#plans" class="inline-flex items-center text-white bg-orange-500 transition-colors duration-500 border-0 py-3 px-8 focus:outline-none hover:bg-ash-800 hover:text-ash-100 rounded-full text-md">
@@ -186,7 +179,7 @@
         <div class="container px-5 py-16 mx-auto">
             <x-title color="light">Milestones</x-title>
             <div class="flex flex-col mx-auto p-2 text-orange-50">
-                <x-timeline-item  title="Lorem ipsum" active>
+                <x-timeline-item title="Lorem ipsum" active>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Vitae, facilis.
                 </x-timeline-item>
@@ -316,10 +309,12 @@
         <div class="container px-5 py-24 mx-auto text-center">
             <x-title color="dark">Meet Our Team</x-title>
             <div class="flex flex-wrap justify-around">
+                @foreach($members as $member)
                 <div class="w-full md:w-1/2 lg:w-1/3 p-3">
                     <div class="mt-8 text-center rounded-lg shadow-md overflow-hidden">
                         <div class="relative team-image">
-                            <img class="w-full h-80 object-cover object-center" src="{{asset('img/team/john.jpg')}}" alt="Team">
+                            <img class="w-full h-80 object-cover object-center" src="{{asset($member->profile_img)}}" alt="Team">
+                            <div class="absolute top-0 w-full h-80 bg-black/20"></div>
                             <div class="absolute inset-x-0 bottom-4 flex justify-center">
                                 <ul class="flex relative px-6 py-4 z-10 bg-white/25 text-white text-md hover:bg-orange-500 rounded-full">
                                     <li class="px-4 hover:scale-125 transition-transform duration-300">
@@ -338,69 +333,15 @@
                             </div>
                         </div>
                         <div class="p-8">
-                            <h5 class="mb-1 text-xl font-bold text-ash-900">Onuigbo John</h5>
-                            <p>CEO / Co-Founder</p>
+                            <h5 class="mb-1 text-xl font-bold text-ash-900 capitalize">{{$member->name}}</h5>
+                            <p>{{$member->position}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 lg:w-1/3 p-3">
-                    <div class="mt-8 text-center rounded-lg shadow-md overflow-hidden">
-                        <div class="relative team-image">
-                            <img class="w-full h-80 object-cover object-center" src="{{asset('img/team/kyrian.jpeg')}}" alt="Team">
-                            <div class="absolute inset-x-0 bottom-4 flex justify-center">
-                                <ul class="flex relative px-6 py-4 z-10 bg-white/25 text-white text-md hover:bg-orange-500 rounded-full">
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://linkein.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h5 class="mb-1 text-xl font-bold text-ash-900">Obikwelu Kyrian</h5>
-                            <p>CTO / Co-Founder</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/3 p-3">
-                    <div class="mt-8 text-center rounded-lg shadow-md overflow-hidden">
-                        <div class="relative team-image">
-                            <img class="w-full h-80 object-cover object-center" src="{{asset('img/team/makuo.jpg')}}" alt="Team">
-                            <div class="absolute inset-x-0 bottom-4 flex justify-center">
-                                <ul class="flex relative px-6 py-4 z-10 bg-white/25 text-white text-md hover:bg-orange-500 rounded-full">
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://linkein.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h5 class="mb-1 text-xl font-bold text-ash-900">Okeke Makuochukwu</h5>
-                            <p>Marketing Director</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-
 </x-guest-layout>
 
 <script type="module">

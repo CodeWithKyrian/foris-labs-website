@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Contact Us">
     <section>
         <div class="w-full bg-center text-white bg-cover min-h-[350px] pt-24 pb-8 " style="background-image: url('/img/header-bg.png');">
             <div class="container max-w-7xl mx-auto flex px-4 md:px-16 py-12 flex-col items-center">
@@ -18,27 +18,21 @@
                     <img class="block max-h-40" src="{{ asset('img/logo-black.png') }}" alt="Foris Labs">
                 </div>
                 <div class="relative flex flex-wrap py-6 rounded shadow-md">
-                    <div class="lg:w-1/2">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">ADDRESS</h2>
-                        <p class="mt-1">1 Obikwelu Street, Umuoba Anam, Ogidi, Anambra State, Nigeria</p>
+                    <div class="w-full md:w-1/2 mt-4">
+                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">EMAIL</h2>
+                        <a href="mailto:{{settings('email')}}" class="text-orange-500 leading-relaxed">{{settings('email')}}</a>
                     </div>
-                    <div class="w-full lg:w-1/2 flex flex-col mt-4 lg:mt-0">
-                        <div class="pr-4">
-                            <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">EMAIL</h2>
-                            <a href="mailto:helpdesk@forislabs.com" class="text-orange-500 leading-relaxed">helpdesk@forislabs.com</a>
-                        </div>
-                        <div class="mt-4">
-                            <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">PHONE</h2>
-                            <a href="tel:+234 903 536 3645" class="text-orange-500 leading-relaxed">+234 903 536 3645</a>
-                        </div>
+                    <div class="w-1/2 mt-4">
+                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">PHONE</h2>
+                        <a href="tel:{{settings('phone_number')}}" class="text-orange-500 leading-relaxed">{{settings('phone_number')}}</a>
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">FACEBOOK</h2>
-                        <a href="https://facebook.com/ForisLabs" target="_blank"  class="text-orange-500 leading-relaxed">Foris Labs</a>
+                        <a href="https://facebook.com/{{settings('facebook')}}" target="_blank"  class="text-orange-500 leading-relaxed">{{settings('facebook')}}</a>
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">INSTAGRAM</h2>
-                        <a href="https://instagram.com/ForisLabs" target="_blank"  class="text-orange-500 leading-relaxed">@forislabsafrica</a>
+                        <a href="https://instagram.com/{{settings('instagram')}}" target="_blank"  class="text-orange-500 leading-relaxed">{{settings('instagram')}}</a>
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">LINKEDIN</h2>
@@ -46,7 +40,7 @@
                     </div>
                     <div class="w-1/2 mt-4">
                         <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">TWITTER</h2>
-                        <a href="https://www.instagram.com/ForisLabs" target="_blank" class="text-orange-500 leading-relaxed">@forislabsafrica</a>
+                        <a href="https://www.twitter.com/{{settings('twitter')}}" target="_blank" class="text-orange-500 leading-relaxed">@ {{settings('twitter')}}</a>
                     </div>
                 </div>
             </div>

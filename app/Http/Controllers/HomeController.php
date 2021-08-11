@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Simulation;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function Index()
     {
-        return view('welcome');
+        $members = User::admins()->get();
+        return view('welcome', compact('members'));
     }
 
     public function Privacy()

@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Dashboard">
     <x-top-card title="Good afternoon, {{ auth()->user()->name }} 👋" subtitle="Here is what’s happening with your projects today:">
     </x-top-card>
     <div class="grid grid-cols-12 gap-6">

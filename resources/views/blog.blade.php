@@ -1,4 +1,4 @@
-<x-blog-layout>
+<x-blog-layout title="News Blog">
     <section class="text-ash-600 bg-ash-100 body-font pt-8">
         <div class="container px-5 lg:px-12 py-16 mx-auto">
             <x-title color="dark">Featured Posts</x-title>
