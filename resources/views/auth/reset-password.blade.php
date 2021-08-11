@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout  title="Password Reset">
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">

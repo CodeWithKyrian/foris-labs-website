@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} | 3d Virtual Laboratory</title>
+    <title>{{$title}} | {{ config('app.name', 'Laravel') }}</title>
     <meta name="description" content="Foris Labs is a virtual 3d Laboratory designed to eliminate the -probem if">
     <meta name="keywords" content="foris labs laboratory 3d virtual offline">
     <!-- Website Favicon -->
