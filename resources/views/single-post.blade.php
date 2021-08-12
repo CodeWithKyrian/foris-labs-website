@@ -9,7 +9,7 @@
                                 <img class="w-full h-auto rounded" src="{{$post->image_url}}" alt="">
                                 <h2 class="text-gray-900 text-3xl my-5 font-bold">{{$post->title}}</h2>
                                 <span class="text-xs text-gray-800 font-thin block mb-5">{{ $post->created_at->format('l, jS F, Y') }}</span>
-                                <div class="text-gray-900 font-thin">
+                                <div class="post-body text-gray-900 font-thin">
                                     {!! $post->body !!}
                                 </div>
                             </div>

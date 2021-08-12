@@ -6,6 +6,7 @@ use App\Models\Role;
 use App\Models\Setting;
 use App\Models\Simulation;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
@@ -53,7 +54,7 @@ class AdminController extends Controller
 
             $data['profile_img'] = Storage::url($path);
         }
-        $admin = User::create([
+        $admin = User::forceCreate([
             'name' => $data['name'],
             'email' => $data['email'],
             'email_verified_at' => now(),
@@ -62,9 +63,10 @@ class AdminController extends Controller
             'position' => $data['position'],
             'profile_img' => $data['profile_img']
         ]);
-        $manager_role = Role::query()->where('slug', 'manager')->first();
-        $admin->roles()->attach($manager_role);
-
+        
+        $admin_role = Role::query()->where('slug', 'admin')->first();
+        $admin->roles()->attach($admin_role);
+        
         return redirect()->route('admin.team')
             ->with('status', 'success')->with('message', 'Team Member Created Successfully');
     }

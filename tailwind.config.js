@@ -9,6 +9,7 @@ module.exports = {
         './resources/views/*.blade.php',
         './resources/views/**/**/*.blade.php',
         './resources/views/**/*.blade.php',
+        './resources/scss/app.scss',
     ],
 
     theme: {

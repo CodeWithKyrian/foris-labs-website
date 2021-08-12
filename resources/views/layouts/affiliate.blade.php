@@ -38,15 +38,7 @@
                 <nav>
                     <h3 class="text-xs uppercase text-ash-500 font-semibold pl-3">Pages</h3>
                     <ul class="mt-3">
-                        <x-nav-icons.menu-circles route="admin.dashboard" title="Dashboard" />
-                        <x-nav-icons.meter route="admin.simulations" title="Simulations" />
-                        <x-nav-icons.box route="admin.posts.index" title="Blog" />
-                        <x-nav-icons.people route="admin.team" title="Team" />
-                    </ul>
-                    <h3 class="text-xs uppercase text-ash-500 font-semibold pl-3 mt-4">Settings</h3>
-                    <ul class="mt-3">
-                        <x-nav-icons.task-list route="admin.settings.page" title="Page Settings" />
-                        <x-nav-icons.gears route="admin.settings.general" title="General Settings" />
+                        <x-nav-icons.menu-circles route="affiliate.dashboard" title="Dashboard" />
                     </ul>
                     <h3 class="text-xs uppercase text-ash-500 font-semibold pl-3 mt-4">Others</h3>
                     <ul class="mt-3">

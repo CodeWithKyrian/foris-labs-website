@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AffiliateController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -24,9 +25,10 @@ Route::get('/simulations', [HomeController::class, 'Simulations'])->name('simula
 Route::get('/pricing', [HomeController::class, 'Pricing'])->name('pricing');
 Route::get('/blog', [HomeController::class, 'ListPosts'])->name('blog');
 Route::get('/blog/{slug}', [HomeController::class, 'GetPost']);
+Route::post('/register-affiliate', [HomeController::class, 'RegisterAffiliate'])->name('register-affiliate');
 
 
-Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:manager'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:super-admin,admin', 'verified'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
     Route::get('/simulations', [AdminController::class, 'Simulations'])->name('simulations');
     Route::get('/team', [AdminController::class, 'Team'])->name('team');
@@ -38,6 +40,10 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:manager'])->gr
     Route::view('settings/page', 'admin.page-settings')->name('settings.page');
     Route::view('settings/general', 'admin.general-settings')->name('settings.general');
     Route::post('settings/update', [AdminController::class, 'UpdateSettings'])->name('settings.update');
+});
+
+Route::prefix('affiliate')->name('affiliate.')->middleware(['auth', 'role:affiliate', 'verified'])->group(function () {
+    Route::view('/dashboard', 'affiliate.dashboard')->name('dashboard');
 });
 
 require __DIR__.'/auth.php';

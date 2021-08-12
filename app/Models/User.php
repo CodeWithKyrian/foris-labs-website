@@ -2,16 +2,19 @@
 
 namespace App\Models;
 
+use App\Notifications\VerifyEmail;
 use App\Traits\HasPermissionsTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Haruncpi\LaravelUserActivity\Traits\Loggable;
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable, HasPermissionsTrait;
+    use HasFactory, Notifiable, HasPermissionsTrait, Loggable;
 
     /**
      * The attributes that are mass assignable.
@@ -48,7 +51,12 @@ class User extends Authenticatable
     public function scopeAdmins($query)
     {
         return $query->whereHas('roles', function (Builder $query) {
-            $query->where('slug', 'manager');
+            $query->whereIn('slug', ['super-admin', 'admin']);
         });
+    }
+
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new VerifyEmail);
     }
 }
