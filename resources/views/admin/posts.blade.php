@@ -48,7 +48,7 @@
                                 </td>
                                 <td class="p-2 whitespace-nowrap">{{$post->published_at ? 'Yes' : 'No'}}</td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <a href="{{route('admin.posts.show', [ 'post' => $post->slug ])}}" target="_blank" class="inline-flex bg-green-600 hover:bg-green-700 text-white px-2 py-2 rounded">
+                                    <a href="{{route('blog.show', [ 'slug' => $post->slug ])}}" target="_blank" class="inline-flex bg-green-600 hover:bg-green-700 text-white px-2 py-2 rounded">
                                         <svg class="fill-current w-3 h-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                             <path d="m510.98 250.98c-43.569-102.44-143.66-168.63-254.98-168.63s-211.41 66.191-254.98 168.63c-1.364 3.206-1.364 6.827 0 10.033 43.568 102.45 143.65 168.65 254.98 168.65 111.33 0 211.41-66.198 254.98-168.65 1.364-3.206 1.364-6.827 0-10.033zm-254.98 153.05c-99.194 0-188.56-57.922-229.19-148.03 40.635-90.098 130-148.01 229.19-148.01 99.193 0 188.56 57.916 229.19 148.01-40.634 90.107-130 148.03-229.19 148.03z" />
                                             <path d="m256 157.82c-54.134 0-98.174 44.041-98.174 98.174s44.041 98.174 98.174 98.174 98.174-44.04 98.174-98.174-44.041-98.174-98.174-98.174zm0 170.72c-39.998 0-72.54-32.542-72.54-72.54s32.542-72.54 72.54-72.54 72.54 32.542 72.54 72.54-32.542 72.54-72.54 72.54z" />

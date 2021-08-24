@@ -24,7 +24,7 @@ Route::get('/contact-us', [HomeController::class, 'Contact'])->name('contact-us'
 Route::get('/simulations', [HomeController::class, 'Simulations'])->name('simulations');
 Route::get('/pricing', [HomeController::class, 'Pricing'])->name('pricing');
 Route::get('/blog', [HomeController::class, 'ListPosts'])->name('blog');
-Route::get('/blog/{slug}', [HomeController::class, 'GetPost']);
+Route::get('/blog/{slug}', [HomeController::class, 'GetPost'])->name('blog.show');
 Route::post('/register-affiliate', [HomeController::class, 'RegisterAffiliate'])->name('register-affiliate');
 
 
