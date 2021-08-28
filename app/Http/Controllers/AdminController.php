@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Image;
+use Intervention\Image\Facades\Image;
 
 class AdminController extends Controller
 {
@@ -40,16 +40,15 @@ class AdminController extends Controller
     public function StoreTeam(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'position' => 'required',
+            'name' => 'required', 'email' => 'required', 'position' => 'required',
+            'facebook' => 'sometimes', 'linkedin' => 'sometimes', 'instagram' => 'sometimes',
             'image' => 'sometimes|image',
         ]);
         if ($request->hasFile('image')) {
             $name = $data['name'];
             $name = "$name.jpg";
             $path = $request->file('image')->storeAs('profile_img', $name, 'public');
-            $image = Image::make(public_path("storage/{$path}"))->fit(200);
+            $image = Image::make(public_path("storage/{$path}"))->fit(500);
             $image->save();
 
             $data['profile_img'] = Storage::url($path);
@@ -61,7 +60,10 @@ class AdminController extends Controller
             'password' => Hash::make('123456'),
             'remember_token' => Str::random(10),
             'position' => $data['position'],
-            'profile_img' => $data['profile_img']
+            'profile_img' => $data['profile_img'],
+            'facebook' => $data['facebook'],
+            'instagram' => $data['instagram'],
+            'linkedin' => $data['linkedin']
         ]);
         
         $admin_role = Role::query()->where('slug', 'admin')->first();
@@ -75,9 +77,8 @@ class AdminController extends Controller
     public function UpdateTeam(Request $request, User $user)
     {
         $data = $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'position' => 'required',
+            'name' => 'required', 'email' => 'required', 'position' => 'required',
+            'facebook' => 'sometimes', 'linkedin' => 'sometimes', 'instagram' => 'sometimes',
             'image' => 'sometimes|image',
         ]);
         if ($request->hasFile('image')) {
@@ -85,7 +86,7 @@ class AdminController extends Controller
             $name = $data['name'];
             $name = "$name.jpg";
             $path = $request->file('image')->storeAs('profile_img', $name, 'public');
-            $image = Image::make(public_path("storage/{$path}"))->fit(200);
+            $image = Image::make(public_path("storage/{$path}"))->fit(500);
             $image->save();
 
             $data['profile_img'] = Storage::url($path);

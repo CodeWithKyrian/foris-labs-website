@@ -55,7 +55,7 @@
                     </table>
                 </div>
 
-                <x-modal open="open" title="New Team Member" size="max-w-lg">
+                <x-modal open="open" title="New Team Member" size="max-w-xl">
                     <form class="py-2" enctype="multipart/form-data" action="{{route('admin.team.store')}}" method="POST">
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-gray-700">
@@ -99,8 +99,8 @@
                                     <input type="text" name="instagram" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
                                 </div>
                                 <div class="">
-                                    <label class="font-medium" for="twitter">Twitter Username</label>
-                                    <input type="text" name="twitter" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
+                                    <label class="font-medium" for="linkedin">LinkedIn Link</label>
+                                    <input type="text" name="linkedin" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
                                 </div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                     </form>
                 </x-modal>
 
-                <x-modal open="openUpdate" title="Update Team Member" size="max-w-lg">
+                <x-modal open="openUpdate" title="Update Team Member" size="max-w-xl">
                     <form class="py-2" enctype="multipart/form-data" :action="'/admin/team/' + user.id" method="POST">
                         @csrf
                         @method('PUT')
@@ -130,22 +130,22 @@
                             </div>
                             <div class="">
                                 <label class="font-medium" for="facebook">Facebook Link</label>
-                                <input type="text" name="facebook"  class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
+                                <input type="text" name="facebook" x-model="user.facebook" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
                             </div>
-                            <div x-data="showImage()">
-                                <label class="font-medium" for="image">Image</label>
+                            <div x-data="showImageUpdate()">
+                                <label class="font-medium" for="image_update">Image</label>
                                 <div class=" md:w-2/3 mx-auto">
                                     <div class="w-full mx-aut pb-[100%] relative mt-2">
                                         <div class="absolute inset-0 overflow-hidden">
-                                            <label for="image" class="flex flex-col items-center justify-center w-full h-full border-2 border-ash-500 rounded border-dashed hover:bg-ash-200 hover:border-ash-600">
-                                                <img id="preview" class="absolute object-cover w-full" :src="$parent.user.profile_img">
+                                            <label for="image_update" class="flex flex-col items-center justify-center w-full h-full border-2 border-ash-500 rounded border-dashed hover:bg-ash-200 hover:border-ash-600">
+                                                <img id="preview_update" class="absolute object-cover w-full" :src="$parent.user.profile_img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-gray-400 group-hover:text-gray-600" viewBox="0 0 20 20" fill="currentColor">
                                                     <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
                                                 </svg>
                                                 <p class="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
                                                     Select a photo</p>
                                             </label>
-                                            <input type="file" class="hidden" id="image" name="image" accept="image/*" @change="showPreview(event)" />
+                                            <input type="file" class="hidden" id="image_update" name="image" accept="image/*" @change="showPreview(event)" />
                                         </div>
                                     </div>
                                 </div>
@@ -153,11 +153,11 @@
                             <div>
                                 <div class="pb-4">
                                     <label class="font-medium" for="instagram">Instagram Link</label>
-                                    <input type="text" name="instagram" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
+                                    <input type="text" name="instagram" x-model="user.instagram" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
                                 </div>
                                 <div class="">
-                                    <label class="font-medium" for="twitter">Twitter Username</label>
-                                    <input type="text" name="twitter" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
+                                    <label class="font-medium" for="linkedin">LinkedIn Link</label>
+                                    <input type="text" name="linkedin" x-model="user.linkedin" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded focus:border-orange-500 focus:ring-0 focus:outline-none">
                                 </div>
                             </div>
                         </div>
@@ -218,6 +218,18 @@
                     if (event.target.files.length > 0) {
                         var src = URL.createObjectURL(event.target.files[0]);
                         var preview = document.getElementById("preview");
+                        preview.src = src;
+                        preview.style.display = "block";
+                    }
+                }
+            }
+        }
+        function showImageUpdate() {
+            return {
+                showPreview(event) {
+                    if (event.target.files.length > 0) {
+                        var src = URL.createObjectURL(event.target.files[0]);
+                        var preview = document.getElementById("preview_update");
                         preview.src = src;
                         preview.style.display = "block";
                     }

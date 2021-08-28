@@ -318,16 +318,16 @@
                             <div class="absolute inset-x-0 bottom-4 flex justify-center">
                                 <ul class="flex relative px-6 py-4 z-10 bg-white/25 text-white text-md hover:bg-orange-500 rounded-full">
                                     <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{$member->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                     </li>
                                     <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://twitter.com/{{$member->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>
                                     </li>
                                     <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        <a href="{{$member->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
                                     </li>
                                     <li class="px-4 hover:scale-125 transition-transform duration-300">
-                                        <a href="https://linkein.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                        <a href="{{$member->linkedin}}" target="_blank"><i class="fab fa-linkedin"></i></a>
                                     </li>
                                 </ul>
                             </div>
