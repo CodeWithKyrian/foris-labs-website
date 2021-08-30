@@ -15,7 +15,7 @@
     body{font: 20px Helvetica, sans-serif;color: #333;margin-top: 100px;}
     article{display: block;max-width: 650px;margin: 0 auto;}
     a{color: #dc8100;text-decoration: none;}
-    a:hover{color: #333;}
+    a:hover{color: #333; }
 </style>
 <body>
     <article>
