@@ -25,7 +25,7 @@
         </ul>
     </div>
     <div class="mt-10">
-        <h2 class="text-xl mb-5 text-gray-900 font-bold">Recent Posts</h2>
+        <h2 class="text-xl mb-5 text-gray-900 font-bold">Older Posts</h2>
         <ul>
             @foreach($posts as $post)
             <li class="mb-3">

@@ -48,9 +48,9 @@ class HomeController extends Controller
 
     public function ListPosts()
     {
-        $posts = Post::paginate(10);
-        $featured = Post::featured()->latest()->limit(2)->get();
-        return view('blog', compact('posts', 'featured'));
+        $posts = Post::latest()->paginate(5);
+        $older = Post::whereDate('created_at', '<', today()->addMonths(5))->oldest()->limit(4)->get();
+        return view('blog', compact('posts', 'older'));
     }
 
     public function GetPost($slug)

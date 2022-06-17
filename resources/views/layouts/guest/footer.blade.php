@@ -10,7 +10,7 @@
         </ul>
     </div>
 </footer>
-<section x-data="{hidden: true}" @scroll.window="hidden=true" class="" @click.away="hidden = true">
+<section x-cloak  x-data="{hidden: true}" @scroll.window="hidden=true" class="" @click.away="hidden = true">
     <div class="fixed w-[50px] left-0 inset-y-0 flex flex-col justify-center transition-transform duration-500 items-center h-screen" :class="{'translate-x-[-50px]': hidden, 'translate-x-0': !hidden }">
         <a class="flex items-center justify-center h-8 w-8 my-1 bg-ash-800 text-white rounded-full transition duration-500 hover:bg-orange-500 hover:text-white hover:transform hover:rotate-[360deg]"><i class="fab fa-facebook-f"></i></a>
         <a class="flex items-center justify-center h-8 w-8 my-1 bg-ash-800 text-white rounded-full transition duration-500 hover:bg-orange-500 hover:text-white hover:transform hover:rotate-[360deg]"><i class="fab fa-twitter"></i></a>

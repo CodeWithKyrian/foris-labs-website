@@ -10,7 +10,8 @@ class CategorySeeder extends Seeder
 {
     protected $faker;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->faker = Factory::create();
     }
     /**
@@ -25,12 +26,18 @@ class CategorySeeder extends Seeder
         Category::create(['name' => 'Biology']);
 
         foreach (Category::all() as $category) {
-            for ($j=0; $j < 2; $j++) { 
-                Category::create([
-                    'parent_id' => $category->id,
-                     'name' => ucfirst($this->faker->word) .' '. $category->name 
-                ]);
-            }
+            Category::create([
+                'parent_id' => $category->id,
+                'name' => 'SS1 ' . $category->name
+            ]);
+            Category::create([
+                'parent_id' => $category->id,
+                'name' => 'SS2 ' . $category->name
+            ]);
+            Category::create([
+                'parent_id' => $category->id,
+                'name' => 'SS3 ' . $category->name
+            ]);
         }
     }
 }

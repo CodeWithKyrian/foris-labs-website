@@ -1,67 +1,63 @@
 <x-guest-layout title="Contact Us">
-    <section>
-        <div class="w-full bg-center text-white bg-cover min-h-[350px] pt-24 pb-8 " style="background-image: url('/img/header-bg.png');">
+<section class="relative bg-orange-50">
+        <div class="absolute z-1 w-full bg-center text-ash-600 bg-cover h-full flex items-center" style="background-image: url('/img/bg-pattern.png');">
+        </div>
+        <div class="w-full relative z-[2] text-ash-600 min-h-[350px] pt-24 pb-8 ">
             <div class="container max-w-7xl mx-auto flex px-4 md:px-16 py-12 flex-col items-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Contact Us</h1>
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-ash-800">Contact Us</h1>
                 <p class="leading-relaxed">
-                    <a href="{{route('home')}}">Home</a>
-                    <i class="fa text-xs fa-chevron-right"></i>
-                    Contact Us
+                    <a href="{{route('home')}}" class="text-orange-500 pr-2">Home</a>
+                    <i class="fa text-xs fa-chevron-right pr-2"></i>
+                    Contact
                 </p>
             </div>
         </div>
     </section>
-    <section class="text-ash-600 body-font relative">
-        <div class="px-6 md:px-8 bg-white  py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-            <div class="lg:w-3/5 md:w-1/2 rounded-lg overflow-hidden sm:mr-10 flex flex-col items-center justify-end relative">
-                <div class="w-full mb-4">
-                    <img class="block max-h-40" src="{{ asset('img/logo-black.png') }}" alt="Foris Labs">
+    <section class="text-gray-600 body-font relative">
+        <div class="px-6 lg:px-12 bg-white  py-12 mx-auto flex sm:flex-nowrap flex-wrap">
+            <form class="lg:w-3/5 md:w-1/2  flex flex-col md:ml-auto w-full  mt-8 md:mt-0" method="POST" action="">
+                @csrf
+                <h2 class="text-gray-900 text-3xl md:text-4xl mb-1 font-bold">Get in touch</h2>
+                <p class="leading-relaxed mb-5 text-gray-600">For enquiries, complaints and special requests, please fill the contact form below and send a message. We are always ready to assist you.</p>
+                <div class="flex flex-col md:flex-row mb-4 space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                    <div class="relative flex-1">
+                        <input required type="text" id="name" placeholder="Name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative flex-1">
+                        <input required type="email" id="email" placeholder="Email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
                 </div>
-                <div class="relative flex flex-wrap py-6 rounded shadow-md">
-                    <div class="w-full md:w-1/2 mt-4">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">EMAIL</h2>
-                        <a href="mailto:{{settings('email')}}" class="text-orange-500 leading-relaxed">{{settings('email')}}</a>
+                <div class="relative mb-4">
+                    <input required type="text" id="subject" placeholder="Subject" name="subject" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <textarea required id="message" name="message" placeholder="Message" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit" class="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded-full text-lg">Send Message</button>
+                </div>
+            </form>
+            <div class="lg:w-2/5 md:w-1/2 rounded-lg overflow-hidden sm:ml-10 flex flex-col items-center justify-center relative">
+                <div class="relative flex flex-wrap py-6">
+                    <!-- <div class="w-full mt-4">
+                        <h2 class="font-bold text-2xl text-gray-900">Office Address</h2>
+                        <p class="leading-relaxed">14th Floor, Basler Messetrum Messeplatz, 4058 Basel, Switzerland</p>
+                    </div> -->
+                    <div class="w-full mt-4">
+                        <h2 class="font-bold text-2xl text-gray-900">Contact Mail</h2>
+                        <a href="mailto:{{settings('email')}}" class="leading-relaxed">{{settings('email')}}</a>
                     </div>
-                    <div class="w-1/2 mt-4">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">PHONE</h2>
-                        <a href="tel:{{settings('phone_number')}}" class="text-orange-500 leading-relaxed">{{settings('phone_number')}}</a>
-                    </div>
-                    <div class="w-1/2 mt-4">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">FACEBOOK</h2>
-                        <a href="https://facebook.com/{{settings('facebook')}}" target="_blank"  class="text-orange-500 leading-relaxed">{{settings('facebook')}}</a>
-                    </div>
-                    <div class="w-1/2 mt-4">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">INSTAGRAM</h2>
-                        <a href="https://instagram.com/{{settings('instagram')}}" target="_blank"  class="text-orange-500 leading-relaxed">{{settings('instagram')}}</a>
-                    </div>
-                    <div class="w-1/2 mt-4">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">LINKEDIN</h2>
-                        <a href="https:://facebook.com/ForisLabs" target="_blank"  class="text-orange-500 leading-relaxed">Foris Labs</a>
-                    </div>
-                    <div class="w-1/2 mt-4">
-                        <h2 class="title-font font-semibold text-ash-900 tracking-widest text-xs">TWITTER</h2>
-                        <a href="https://www.twitter.com/{{settings('twitter')}}" target="_blank" class="text-orange-500 leading-relaxed">@ {{settings('twitter')}}</a>
+                    <div class="w-full mt-4">
+                        <h2 class="font-bold text-2xl text-gray-900">Website</h2>
+                        <a href="https://www.suissecoinhub.com" class="leading-relaxed">www.suissecoinhub.com</a>
                     </div>
                 </div>
             </div>
-            <form class="lg:w-2/5 md:w-1/2  flex flex-col md:ml-auto w-full  mt-8 md:mt-0">
-                <h2 class="text-ash-900 text-lg mb-1 font-bold title-font">Feedback</h2>
-                <p class="leading-relaxed mb-5 text-ash-600">We'd like to hear from you </p>
-                <div class="relative mb-4">
-                    <label for="name" class="leading-7 text-sm text-ash-600">Name</label>
-                    <input required type="text" id="name" name="name" class="w-full bg-white rounded border border-ash-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-ash-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-                <div class="relative mb-4">
-                    <label for="email" class="leading-7 text-sm text-ash-600">Email</label>
-                    <input required type="email" id="email" name="email" class="w-full bg-white rounded border border-ash-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-ash-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-                <div class="relative mb-4">
-                    <label for="message" class="leading-7 text-sm text-ash-600">Message</label>
-                    <textarea required id="message" name="message" class="w-full bg-white rounded border border-ash-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-base outline-none text-ash-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-                </div>
-                <button type="submit" class="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded-full text-lg">Send Message</button>
-                <p class="text-xs text-center text-ash-500 mt-3">Conduct experiments anywhere, anytime!!.</p>
-            </form>
         </div>
     </section>
+    <!-- <section>
+        <div class="container px-5 lg:px-12 py-12 mx-auto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2281.259603136396!2d7.598881402457532!3d47.56429078199444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9b905521f4d%3A0x9f26806a1af25882!2sBasler%20Messeturm!5e1!3m2!1sen!2sng!4v1633738179957!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section> -->
 </x-guest-layout>

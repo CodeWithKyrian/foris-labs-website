@@ -3,11 +3,11 @@
 @php
 $classes = (request()->routeIs($route))
             ?
-            "bg-ash-900 text-white"
+            "text-orange-600"
             :
-            "text-ash-300 hover:bg-ash-700 hover:text-white";
+            "text-ash-800 hover:text-orange-600";
 @endphp
 
-<a href="{{ route($route) }}" {{ $attributes->merge(['class' => $classes. " px-3 py-2 rounded-md text-sm font-medium"]) }}>
+<a href="{{ route($route) }}" {{ $attributes->merge(['class' => $classes. " px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"]) }}>
     {{ $slot }}
 </a>

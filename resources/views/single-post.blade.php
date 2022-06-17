@@ -1,4 +1,4 @@
-<x-blog-layout :title="$post->title">
+<x-guest-layout :title="$post->title">
     <section>
         <div class="container px-5 lg:px-12 py-16 mx-auto">
             <div class="flex flex-wrap overflow-hidden">
@@ -23,4 +23,4 @@
             </div>
         </div>
     </section>
-</x-blog-layout>
+</x-guest-layout>

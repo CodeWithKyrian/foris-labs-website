@@ -61,6 +61,7 @@
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/ckeditor.js')}}"></script>
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'))

@@ -2,11 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
 html {
   scroll-behavior: smooth;
 }
+[x-cloak] {
+  display: none !important;
+}
 
-.post-body, .ck-editor {
+.post-body,
+.ck-editor {
   padding-top: 0.5rem !important;
   ul {
     list-style: initial;
@@ -45,7 +50,3 @@ html {
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
-
-// Swiper
-@import "~swiper/swiper.min.css";
-@import "~swiper/components/pagination/pagination.scss";

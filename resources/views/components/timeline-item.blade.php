@@ -10,8 +10,8 @@
             @if($active) <div class="w-4 h-4 rounded-full bg-orange-200 animate-pulse"></div> @endif
         </div>
     </div>
-    <div class="relative bg-ash-600 text-ash-100 col-start-6 col-end-10 p-4 rounded-tr-lg rounded-bl-lg mb-4 mr-auto shadow-md">
-        <div class="absolute top-[-9px] -left-2 border-t-[14px] border-t-transparent border-b-[14px] border-b-transparent border-r-[14px] border-r-ash-600 rotate-[135deg]"></div>
+    <div class="relative bg-white text-ash-800 col-start-6 col-end-10 p-4 rounded-tr-lg rounded-bl-lg mb-4 mr-auto shadow-md">
+        <div class="absolute top-[-9px] -left-2 border-t-[14px] border-t-transparent border-b-[14px] border-b-transparent border-r-[14px] border-r-white rotate-[135deg]"></div>
         <h3 class="font-bold text-lg mb-1">{{$title}}</h3>
         <p class="leading-tight text-justify">
             {{$slot}}

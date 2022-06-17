@@ -6,24 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{$title}} | {{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} | {{$title}}</title>
     <meta name="description" content="Foris Labs is a virtual 3d Laboratory designed to eliminate the -probem if">
     <meta name="keywords" content="foris labs laboratory 3d virtual offline">
     <!-- Website Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 </head>
 
-<body>
+<body x-data>
     @include('layouts.guest.navigation')
     <div class="font-sans text-ash-900 antialiased">
         {{ $slot }}
@@ -51,6 +47,10 @@
         </section>
         @include('layouts.guest.footer')
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
 </body>
 
 </html>
