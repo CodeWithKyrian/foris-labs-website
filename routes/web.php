@@ -5,6 +5,7 @@ use App\Http\Controllers\AffiliateController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('pull-up', function () {
+    Artisan::call('up');
+    return "Website pulled up successfully";
+});
+
+Route::get('pull-down', function () {
+    $secret = 'our-little-secret-gateway';
+    Artisan::call('down', ['--secret' => $secret]);
+    return "Website pulled down successfully. Key = '$secret'";
+});
 Route::get('/', [HomeController::class, 'Index'])->name('home');
 Route::get('/privacy-policy', [HomeController::class, 'Privacy'])->name('privacy-policy');
 Route::get('/terms-of-use', [HomeController::class, 'Terms'])->name('terms');
@@ -46,4 +57,4 @@ Route::prefix('affiliate')->name('affiliate.')->middleware(['auth', 'role:affili
     Route::view('/dashboard', 'affiliate.dashboard')->name('dashboard');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
