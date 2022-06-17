@@ -76,7 +76,7 @@
           <div class="flex w-full justify-center py-2 md:justify-start">
             <a href="{{ route('pricing') }}#plans"
               class="hover:bg-ash-800 hover:text-ash-100 text-md inline-flex items-center rounded-full border-0 bg-orange-500 py-3 px-8 text-white transition-colors duration-500 focus:outline-none">
-              <span>Pre-order Now</span>
+              <span>Join WaitList</span>
             </a>
           </div>
         </div>
