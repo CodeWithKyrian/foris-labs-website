@@ -81,7 +81,7 @@
   </section>
   <section>
     <div class="container mx-auto px-5 pt-12 text-center">
-      <x-title color="dark">Our Partners</x-title>
+      <x-title color="dark">Supported By</x-title>
       <div class="flex">
         <div class="swiper-container relative min-h-[6rem] overflow-hidden" id="container-1">
           <div class="swiper-wrapper">
@@ -93,12 +93,22 @@
             <div class="swiper-slide !h-12 !w-auto">
               <img
                 class="h-full object-cover object-center grayscale transition duration-500 hover:scale-110 hover:filter-none"
+                alt="image" src="{{ asset('img/brands/startup-south.png') }}">
+            </div>
+            <div class="swiper-slide !h-12 !w-auto">
+              <img
+                class="h-full object-cover object-center grayscale transition duration-500 hover:scale-110 hover:filter-none"
                 alt="image" src="{{ asset('img/brands/stanford.png') }}">
             </div>
             <div class="swiper-slide !h-12 !w-auto">
               <img
                 class="h-full object-cover object-center grayscale transition duration-500 hover:scale-110 hover:filter-none"
                 alt="image" src="{{ asset('img/brands/stemnovo.png') }}">
+            </div>
+            <div class="swiper-slide !h-12 !w-auto">
+              <img
+                class="h-full object-cover object-center grayscale transition duration-500 hover:scale-110 hover:filter-none"
+                alt="image" src="{{ asset('img/brands/stan.png') }}">
             </div>
           </div>
         </div>
@@ -326,7 +336,7 @@
 
 <script type="module">
   const swiper = new Swiper('#container-1', {
-    spaceBetween: 10,
+    spaceBetween: 20,
     speed: 6000,
     loop: true,
     autoplay: {
