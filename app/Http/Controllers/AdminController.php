@@ -65,10 +65,10 @@ class AdminController extends Controller
             'instagram' => $data['instagram'],
             'linkedin' => $data['linkedin']
         ]);
-        
+
         $admin_role = Role::query()->where('slug', 'admin')->first();
         $admin->roles()->attach($admin_role);
-        
+
         return redirect()->route('admin.team')
             ->with('status', 'success')->with('message', 'Team Member Created Successfully');
     }
@@ -82,7 +82,7 @@ class AdminController extends Controller
             'image' => 'sometimes|image',
         ]);
         if ($request->hasFile('image')) {
-            File::delete(public_path($user->profile_img));
+            File::delete($user->profile_img);
             $name = $data['name'];
             $name = "$name.jpg";
             $path = $request->file('image')->storeAs('profile_img', $name, 'public');
