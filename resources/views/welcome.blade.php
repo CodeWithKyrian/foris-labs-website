@@ -38,7 +38,7 @@
           {!! settings('intro_paragraph') !!}
         </div>
       </div>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div class="rounded bg-orange-50 p-8 shadow">
           <h2 class="mb-6 text-base font-bold uppercase text-orange-600 md:text-lg">Our Vision</h2>
           <p class="text-sm leading-relaxed md:text-base">{{ settings('vision') }}</p>
@@ -47,10 +47,6 @@
           <h2 class="mb-6 text-base font-bold uppercase text-blue-600 md:text-lg">Our Mission</h2>
           <p class="text-sm leading-relaxed md:text-base">{{ settings('mission') }}</p>
 
-        </div>
-        <div class="rounded bg-orange-50 p-8 shadow">
-          <h2 class="mb-6 text-base font-bold uppercase text-orange-600 md:text-lg">Our Results</h2>
-          <p class="text-sm leading-relaxed md:text-base">{{ settings('vision') }}</p>
         </div>
       </div>
     </div>
