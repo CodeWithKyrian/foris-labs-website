@@ -13,7 +13,7 @@
           <p class="mb-8 text-lg font-medium leading-relaxed">Conduct science experiments in a practical, engaging, fun
             and portable environment.</p>
           <div class="flex justify-center">
-            <a href="{{ route('pricing') }}#plans"
+            <a href="#sub"
               class="text-md inline-flex items-center rounded-full border-0 bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:outline-none">
               <span>Try Now</span>
             </a>
