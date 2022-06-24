@@ -14,8 +14,7 @@
             and portable environment.</p>
           <div class="flex justify-center">
             <a href="{{ route('pricing') }}#plans"
-              class="text-md inline-flex items-center rounded-tl-full rounded-br-full border-0 bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:outline-none">
-              <i class="fab fa-windows px-2 text-3xl"></i>
+              class="text-md inline-flex items-center rounded-full border-0 bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:outline-none">
               <span>Try Now</span>
             </a>
           </div>
@@ -28,9 +27,9 @@
   </section>
   <section class="text-ash-800 bg-white">
     <div class="container mx-auto px-5 py-16 lg:px-12">
-      <x-title color="dark">What is Foris Labs?</x-title>
+      <x-title color="dark">Who we are?</x-title>
       <div class="mb-4 flex flex-col items-center md:flex-row">
-        <div class="mb-10 w-5/6 md:mb-0 md:w-2/5 lg:w-full lg:max-w-sm">
+        <div class="mb-10 w-full md:mb-0 md:w-2/5 lg:w-full lg:max-w-sm">
           <img class="object-cover object-center" alt="hero" src="{{ asset('/img/labb.jpg') }}">
         </div>
         <div
@@ -69,12 +68,12 @@
               <li class="flex py-2"><i class="fa fa-long-arrow-alt-right pr-6 text-sm"></i>{{ $feature }}</li>
             @endforeach
           </ul>
-          <div class="flex w-full justify-center py-2 md:justify-start">
+          {{-- <div class="flex w-full justify-center py-2 md:justify-start">
             <a href="{{ route('pricing') }}#plans"
               class="hover:bg-ash-800 hover:text-ash-100 text-md inline-flex items-center rounded-full border-0 bg-orange-500 py-3 px-8 text-white transition-colors duration-500 focus:outline-none">
               <span>Join WaitList</span>
             </a>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -104,11 +103,6 @@
               <img
                 class="h-full object-cover object-center grayscale transition duration-500 hover:scale-110 hover:filter-none"
                 alt="image" src="{{ asset('img/brands/stemnovo.png') }}">
-            </div>
-            <div class="swiper-slide !h-12 !w-auto">
-              <img
-                class="h-full object-cover object-center grayscale transition duration-500 hover:scale-110 hover:filter-none"
-                alt="image" src="{{ asset('img/brands/stan.png') }}">
             </div>
           </div>
         </div>
