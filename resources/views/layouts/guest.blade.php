@@ -31,6 +31,7 @@
         </div>
         <form action="{{ route('join-waitlist') }}" method="POST"
           class="bg-ash-700 mt-10 flex w-full flex-col rounded-lg bg-opacity-50 p-8 md:ml-auto md:mt-0 md:w-1/2 lg:w-2/6">
+
           @csrf
           <h2 class="title-font mb-5 text-lg font-medium text-white">Enter Details</h2>
           <div class="relative mb-4">
@@ -56,7 +57,7 @@
           <button
             class="rounded border-0 bg-orange-500 py-2 px-8 text-lg text-white hover:bg-orange-600 focus:outline-none">Join
             WaitList</button>
-          <p class="mt-3 text-xs">We will get back to you on further instructions</p>
+          <p class="mt-3 text-xs">By submitting this form, you have agreed to receive notifications from Foris Labs about the launch.</p>
         </form>
       </div>
     </section>
