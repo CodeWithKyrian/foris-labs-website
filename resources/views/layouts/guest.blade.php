@@ -29,7 +29,7 @@
           <h1 class="title-font text-3xl font-medium text-white">Join our waitlist now?</h1>
           <p class="mt-4 leading-relaxed">Be the first to be notified about Foris Labs once we launch</p>
         </div>
-        <form action="{{ route('register-affiliate') }}" method="POST"
+        <form action="{{ route('join-waitlist') }}" method="POST"
           class="bg-ash-700 mt-10 flex w-full flex-col rounded-lg bg-opacity-50 p-8 md:ml-auto md:mt-0 md:w-1/2 lg:w-2/6">
           @csrf
           <h2 class="title-font mb-5 text-lg font-medium text-white">Enter Details</h2>
