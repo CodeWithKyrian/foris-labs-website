@@ -80,43 +80,47 @@
   </section>
   <section class="text-ash-400 bg-ash-800 body-font">
     <div class="container mx-auto flex flex-wrap items-center px-5 py-16">
-      <div class="pr-0 md:w-1/2 md:pr-16 lg:w-3/5 lg:pr-0">
+      <div class="pr-0 md:w-1/3 md:pr-16 lg:w-2/5 lg:pr-0">
         <h1 class="title-font text-3xl font-medium text-white">Join our waitlist now?</h1>
         <p class="mt-4 leading-relaxed">Be the first to be notified about Foris Labs once we launch</p>
       </div>
-      <form action="https://forislabs.us17.list-manage.com/subscribe/post?u=0ab19de30eebc4efc1b078a12&amp;id=a29081475a" method="POST"
-        class="bg-ash-700 mt-10 flex w-full flex-col rounded-lg bg-opacity-50 p-8 md:ml-auto md:mt-0 md:w-1/2 lg:w-2/6">
+      <form action="https://forislabs.us17.list-manage.com/subscribe/post?u=0ab19de30eebc4efc1b078a12&amp;id=a29081475a"
+        method="POST"
+        class="bg-ash-700 mt-10 flex w-full flex-col rounded-lg bg-opacity-50 p-8 md:ml-auto md:mt-0 md:w-2/3 lg:w-3/5">
 
         @csrf
         <h2 class="title-font mb-5 text-lg font-medium text-white">Please provide your details</h2>
-        <div class="relative mb-4">
-          <label for="full-name" class="text-ash-400 text-sm leading-7">First Name</label>
-          <input type="text" required  name="FNAME"
-            class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
-        </div>
-        <div class="relative mb-4">
-          <label for="full-name" class="text-ash-400 text-sm leading-7">Last Name</label>
-          <input type="text" required  name="LNAME"
-            class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
-        </div>
-        <div class="relative mb-4">
-          <label for="full-name" class="text-ash-400 text-sm leading-7">I am a</label>
-          <select name="TYPE" required
-            class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
-            <option value="Student">Student</option>
-            <option value="Teacher/Instructor">Teacher/Instructor</option>
-            <option value="School Administrator">School Administrator</option>
-          </select>
-        </div>
-        <div class="relative mb-4">
-          <label for="email" class="text-ash-400 text-sm leading-7">Email</label>
-          <input type="email" required id="email" name="EMAIL"
-            class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+        <div class="flex flex-wrap">
+          <div class="w-full px-2 md:w-1/2 relative mb-4">
+            <label for="full-name" class="text-ash-400 text-sm leading-7">First Name</label>
+            <input type="text" required name="FNAME"
+              class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+          </div>
+          <div class="w-full px-2 md:w-1/2 relative mb-4">
+            <label for="full-name" class="text-ash-400 text-sm leading-7">Last Name</label>
+            <input type="text" required name="LNAME"
+              class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+          </div>
+          <div class="w-full px-2 md:w-1/2 relative mb-4">
+            <label for="full-name" class="text-ash-400 text-sm leading-7">I am a</label>
+            <select name="TYPE" required
+              class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+              <option value="Student">Student</option>
+              <option value="Teacher/Instructor">Teacher/Instructor</option>
+              <option value="School Administrator">School Administrator</option>
+            </select>
+          </div>
+          <div class="w-full px-2 md:w-1/2 relative mb-4">
+            <label for="email" class="text-ash-400 text-sm leading-7">Email</label>
+            <input type="email" required id="email" name="EMAIL"
+              class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+          </div>
         </div>
         <button
           class="rounded border-0 bg-orange-500 py-2 px-8 text-lg text-white hover:bg-orange-600 focus:outline-none">Join
           WaitList</button>
-        <p class="mt-3 text-xs">By submitting this form, you have agreed to receive notifications from Foris Labs about the launch.</p>
+        <p class="mt-3 text-xs">By submitting this form, you have agreed to receive notifications from Foris Labs about
+          the launch.</p>
       </form>
     </div>
   </section>
