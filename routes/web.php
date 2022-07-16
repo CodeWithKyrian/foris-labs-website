@@ -36,7 +36,7 @@ Route::get('/simulations', [HomeController::class, 'Simulations'])->name('simula
 Route::get('/pricing', [HomeController::class, 'Pricing'])->name('pricing');
 Route::get('/blog', [HomeController::class, 'ListPosts'])->name('blog');
 Route::get('/blog/{slug}', [HomeController::class, 'GetPost'])->name('blog.show');
-Route::post('/register-affiliate', [HomeController::class, 'RegisterAffiliate'])->name('register-affiliate');
+Route::post('/join-waitlist', [HomeController::class, 'JoinWaitlist'])->name('join-waitlist');
 
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:super-admin,admin', 'verified'])->group(function () {

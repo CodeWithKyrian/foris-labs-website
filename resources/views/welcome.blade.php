@@ -15,7 +15,7 @@
           <div class="flex justify-center">
             <a href="#sub"
               class="text-md inline-flex items-center rounded-full border-0 bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:outline-none">
-              <span>Try Now</span>
+              <span>Join Waiting List</span>
             </a>
           </div>
         </div>

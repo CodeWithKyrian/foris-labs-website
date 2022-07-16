@@ -11,6 +11,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Newsletter;
 
 class HomeController extends Controller
 {
@@ -60,27 +61,16 @@ class HomeController extends Controller
         return view('single-post', compact('post', 'recent_posts'));
     }
 
-    public function RegisterAffiliate(Request $request)
+    public function JoinWaitlist(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255',
+            'type' => 'required|string'
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make(123456),
-            'profile_img' => '/img/avatar.png'
-        ]);
+        Newsletter::subscribe($request->email);
 
-        $affiliate_role = Role::query()->where('slug', 'affiliate')->first();
-        $user->roles()->attach($affiliate_role);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::AFFILIATE_HOME);
+        return redirect()->back();
     }
 }

@@ -26,8 +26,8 @@
     <section class="text-ash-400 bg-ash-800 body-font">
       <div class="container mx-auto flex flex-wrap items-center px-5 py-16">
         <div class="pr-0 md:w-1/2 md:pr-16 lg:w-3/5 lg:pr-0">
-          <h1 class="title-font text-3xl font-medium text-white">Interested in joining the beta program?</h1>
-          <p class="mt-4 leading-relaxed">Get a 5% commision on payment if you join the wait list .</p>
+          <h1 class="title-font text-3xl font-medium text-white">Join our waitlist now?</h1>
+          <p class="mt-4 leading-relaxed">Be the first to be notified about Foris Labs once we launch</p>
         </div>
         <form action="{{ route('register-affiliate') }}" method="POST"
           class="bg-ash-700 mt-10 flex w-full flex-col rounded-lg bg-opacity-50 p-8 md:ml-auto md:mt-0 md:w-1/2 lg:w-2/6">
@@ -35,8 +35,18 @@
           <h2 class="title-font mb-5 text-lg font-medium text-white">Enter Details</h2>
           <div class="relative mb-4">
             <label for="full-name" class="text-ash-400 text-sm leading-7">Full Name</label>
-            <input type="text" required id="name" name="name"
+            <input type="text" required  name="name"
               class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+          </div>
+          <div class="relative mb-4">
+            <label for="full-name" class="text-ash-400 text-sm leading-7">I am a</label>
+            <select name="type" required
+              class="bg-ash-600 border-ash-600 text-ash-100 w-full rounded border bg-opacity-20 py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-orange-200 focus:bg-transparent focus:ring-1 focus:ring-orange-600">
+                <option value="student">Student</option>
+                <option value="parent">Parent/Guardian</option>
+                <option value="teacher">Teacher/Instructor</option>
+                <option value="school-admin">School Administrator</option>
+            </select>
           </div>
           <div class="relative mb-4">
             <label for="email" class="text-ash-400 text-sm leading-7">Email</label>
