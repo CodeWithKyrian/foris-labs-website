@@ -1,4 +1,4 @@
-<x-guest-layout title="3d Virtual Laboratory">
+<x-guest-layout title="3d Virtual Science Laboratory">
   <section class="relative bg-orange-50">
     <div class="z-1 text-ash-600 absolute flex h-full w-full items-center bg-cover bg-center"
       style="background-image: url('/img/bg-pattern.png');">
@@ -8,7 +8,7 @@
         <div
           class="mb-16 flex flex-col items-center pt-16 text-center md:mb-0 md:w-3/5 md:items-start md:text-left lg:pr-12">
           <h1 class="title-font text-ash-800 mb-4 text-4xl font-black sm:text-5xl">Africa's first <span
-              class="text-orange-500">offline</span> virtual 3d <span class="text-orange-500">laboratory</span>
+              class="text-orange-500">offline</span> 3d virtual <span class="text-orange-500">laboratory</span>
           </h1>
           <p class="mb-8 text-lg font-medium leading-relaxed">Conduct science experiments in a practical, engaging, fun
             and portable environment.</p>
