@@ -49,7 +49,7 @@
                     </div>
                     <div class="w-full mt-4">
                         <h2 class="font-bold text-2xl text-gray-900">Website</h2>
-                        <a href="https://www.suissecoinhub.com" class="leading-relaxed">www.suissecoinhub.com</a>
+                        <a href="https://www.forislabs.com" class="leading-relaxed">https://www.forislabs.com</a>
                     </div>
                 </div>
             </div>
